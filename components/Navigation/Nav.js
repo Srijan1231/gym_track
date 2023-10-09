@@ -9,13 +9,21 @@ import {
 } from "@radix-ui/react-popover";
 import { Button } from "../ui/button";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
+import Link from "next/link";
 
 export const Nav = () => {
   return (
     <div className="flex  items-center justify-between">
-      <div className="text-2xl">gymTrack</div>
+      <Link href={"/"}>
+        <div className="border-b-gray-700 border-b-4 pb-2 text-2xl font-bold text-gray-900  dark:text-white">
+          gymTrack
+        </div>
+      </Link>
+
       <div className="hidden items-center gap-4 md:flex lg:flex">
-        <Button>signIn</Button>
+        <Link href={"/login"}>
+          <Button>signIn</Button>
+        </Link>
         <Button variant="secondary">signUp</Button>
         <ThemeToggle />
       </div>
@@ -26,12 +34,12 @@ export const Nav = () => {
               <HamburgerMenuIcon />
             </Button>
           </PopoverTrigger>
-          <PopoverContent>
-            <div className="flex flex-col items-center justify-center pt-2 gap-2">
+          <PopoverContent className="flex flex-col items-center justify-center pt-2 gap-2 border-2 border-green-300 bg-green-100 rounded">
+            <Link href={"/login"}>
               <Button>signIn</Button>
-              <Button variant="secondary">signUp</Button>
-              <ThemeToggle />
-            </div>
+            </Link>
+            <Button variant="secondary">signUp</Button>
+            <ThemeToggle />
           </PopoverContent>
         </Popover>
       </div>
