@@ -5,12 +5,8 @@ import { Nav } from "@/components/Navigation/Nav";
 export default function Home() {
   return (
     <Layout>
-      <div className=" p-3">
-        {/* Navigation */}
-        <Nav />
-        <div className=" mt-2  ">
-          <Hero />
-        </div>
+      <div className="   lg:m-0 md:m-0 dark:mt-2">
+        <Hero />
       </div>
     </Layout>
   );

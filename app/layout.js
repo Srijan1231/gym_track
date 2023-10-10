@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { Nav } from "@/components/Navigation/Nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,13 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <main className="w-screen h-screen">
+            <div className="m-2">
+              {" "}
+              <Nav />
+              {children}
+            </div>
+          </main>
         </ThemeProvider>
       </body>
     </html>

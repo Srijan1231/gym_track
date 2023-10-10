@@ -20,14 +20,14 @@ export const Nav = () => {
         </div>
       </Link>
 
-      <div className="hidden items-center gap-4 md:flex lg:flex">
+      <div className="hidden items-center gap-4 md:flex lg:flex ">
         <Link href={"/login"}>
           <Button>signIn</Button>
         </Link>
         <Button variant="secondary">signUp</Button>
         <ThemeToggle />
       </div>
-      <div className="visible lg:hidden md:hidden">
+      <div className="visible lg:hidden md:hidden ">
         <Popover>
           <PopoverTrigger>
             <Button variant="outline" size="icon" className="bg-inherit">
